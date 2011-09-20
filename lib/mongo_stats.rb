@@ -9,8 +9,8 @@ require "mongo_stats/server_stats"
 module MongoStats
   class << self
 
-    def connection
-      Connection.new
+    def connection(host = nil, port = nil, opts = {})
+      Connection.new(host, port, opts)
     end
 
   end

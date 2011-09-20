@@ -3,8 +3,8 @@ module MongoStats
 
     attr_reader :connection
 
-    def initialize
-      @connection = Mongo::Connection.new()
+    def initialize(host = nil, port = nil, opts = {})
+      @connection = Mongo::Connection.new(host, port, opts)
     end
 
 
