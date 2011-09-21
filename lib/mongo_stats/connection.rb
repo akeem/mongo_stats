@@ -7,7 +7,6 @@ module MongoStats
       @connection = Mongo::Connection.new(host, port, opts)
     end
 
-
     def db_stats(database)
       DbStats.new(database, self.connection)
     end
