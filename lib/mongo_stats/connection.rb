@@ -14,5 +14,10 @@ module MongoStats
     def server_stats
       ServerStats.new(self.connection)
     end
+
+    def close
+      @connection.close
+    end
+
   end
 end
